@@ -36,7 +36,7 @@ feature -- Access
 			]"
 		end
 
-	wiring_pi_version (major: POINTER; minor: POINTER) 
+	wiring_pi_version (major: POINTER; minor: POINTER)
 		do
 			c_wiring_pi_version (major, minor)
 		ensure
@@ -124,23 +124,23 @@ feature -- Access
 			]"
 		end
 
-	digital_read8 (pin: INTEGER): INTEGER
-		external
-			"C inline use <wiringPi.h>"
-		alias
-			"[
-				return digitalRead8 ((int)$pin);
-			]"
-		end
+--	digital_read8 (pin: INTEGER): INTEGER
+--		external
+--			"C inline use <wiringPi.h>"
+--		alias
+--			"[
+--				return digitalRead8 ((int)$pin);
+--			]"
+--		end
 
-	digital_write8 (pin: INTEGER; value: INTEGER)
-		external
-			"C inline use <wiringPi.h>"
-		alias
-			"[
-				digitalWrite8 ((int)$pin, (int)$value);
-			]"
-		end
+--	digital_write8 (pin: INTEGER; value: INTEGER)
+--		external
+--			"C inline use <wiringPi.h>"
+--		alias
+--			"[
+--				digitalWrite8 ((int)$pin, (int)$value);
+--			]"
+--		end
 
 	pwm_write (pin: INTEGER; value: INTEGER)
 		external
@@ -169,23 +169,23 @@ feature -- Access
 			]"
 		end
 
-	wiring_pi_setup_pi_face: INTEGER
-		external
-			"C inline use <wiringPi.h>"
-		alias
-			"[
-				return wiringPiSetupPiFace ();
-			]"
-		end
+--	wiring_pi_setup_pi_face: INTEGER
+--		external
+--			"C inline use <wiringPi.h>"
+--		alias
+--			"[
+--				return wiringPiSetupPiFace ();
+--			]"
+--		end
 
-	wiring_pi_setup_pi_face_for_gpio_prog: INTEGER
-		external
-			"C inline use <wiringPi.h>"
-		alias
-			"[
-				return wiringPiSetupPiFaceForGpioProg ();
-			]"
-		end
+--	wiring_pi_setup_pi_face_for_gpio_prog: INTEGER
+--		external
+--			"C inline use <wiringPi.h>"
+--		alias
+--			"[
+--				return wiringPiSetupPiFaceForGpioProg ();
+--			]"
+--		end
 
 	pi_gpio_layout: INTEGER
 		external
@@ -205,7 +205,7 @@ feature -- Access
 			]"
 		end
 
-	pi_board_id (model: POINTER; rev: POINTER; mem: POINTER; maker: POINTER; overvolted: POINTER) 
+	pi_board_id (model: POINTER; rev: POINTER; mem: POINTER; maker: POINTER; overvolted: POINTER)
 		do
 			c_pi_board_id (model, rev, mem, maker, overvolted)
 		ensure
@@ -338,14 +338,14 @@ feature -- Access
 			]"
 		end
 
-	wiring_pi_isr (pin: INTEGER; mode: INTEGER; function: POINTER): INTEGER 
+	wiring_pi_isr (pin: INTEGER; mode: INTEGER; function: POINTER): INTEGER
 		do
 			Result := c_wiring_pi_isr (pin, mode, function)
 		ensure
 			instance_free: class
 		end
 
-	pi_thread_create (fn: POINTER): INTEGER 
+	pi_thread_create (fn: POINTER): INTEGER
 		do
 			Result := c_pi_thread_create (fn)
 		ensure

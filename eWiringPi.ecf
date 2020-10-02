@@ -14,12 +14,6 @@
 			<concurrency support="scoop" use="scoop"/>
 			<void_safety support="all" use="all"/>
 		</capability>
-		
-		<external_object location="$ECF_CONFIG_PATH/C/spec/$(ISE_PLATFORM)/lib/eif_eWiringPi.a">
-			<condition>
-				<platform excluded_value="windows"/>
-			</condition>
-		</external_object>
 		<external_include location="/usr/include">
 			<condition>
 				<platform excluded_value="windows"/>
