@@ -14,9 +14,23 @@
 			<concurrency support="scoop" use="scoop"/>
 			<void_safety support="all" use="all"/>
 		</capability>
-		<external_include location="/usr/include"/>
-		<external_cflag value="-lwiringPi"/>
-		<library name="base" location="$ISE_LIBRARY\library\base\base-safe.ecf"/>
+		
+		<external_object location="$ECF_CONFIG_PATH/C/spec/$(ISE_PLATFORM)/lib/eif_eWiringPi.a">
+			<condition>
+				<platform excluded_value="windows"/>
+			</condition>
+		</external_object>
+		<external_include location="/usr/include">
+			<condition>
+				<platform excluded_value="windows"/>
+			</condition>
+		</external_include>
+		<external_linker_flag value="-lwiringPi">
+			<condition>
+				<platform excluded_value="windows"/>
+			</condition>
+		</external_linker_flag>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
 		<library name="diff" location="$ISE_LIBRARY\library\diff\diff.ecf"/>
 		<cluster name="ewiringpi" location=".\" recursive="true">
 			<description>System Classes</description>
@@ -43,7 +57,7 @@
 		</option>
 		<setting name="console_application" value="false"/>
 		<setting name="total_order_on_reals" value="true"/>
-		<library name="testing" location="$ISE_LIBRARY\library\testing\testing-safe.ecf"/>
+		<library name="testing" location="$ISE_LIBRARY\library\testing\testing.ecf"/>
 		<cluster name="tests" location=".\tests\" recursive="true"/>
 	</target>
 </system>

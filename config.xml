@@ -2,12 +2,37 @@
 <ewg_config name="eWiringPi">
 
   <rule_list>
+	<!--  Ignore digitalRead8 -->
+   <rule>
+	<match>
+	  <identifier name="digitalRead8"/>
+	</match>
+	<wrapper type="none"> </wrapper>
+    </rule>
+    	<!--  Ignore digitalWrite8 TODO check if it's needed-->
+   <rule>
+	<match>
+	  <identifier name="digitalWrite8"/>
+	</match>
+	<wrapper type="none"> </wrapper>
+    </rule>
+  
+  <!--  Ignore PiFace specifics are deprecated wiringPi.h -->
+   <rule>
+	<match>
+	  <identifier name="wiringPiSetupPiFace.*"/>
+	</match>
+	<wrapper type="none"> </wrapper>
+    </rule>
+
+
     <rule>
       <match>
       </match>
       <wrapper type="default">
       </wrapper>
     </rule>
+    
   </rule_list>
 
 </ewg_config>
