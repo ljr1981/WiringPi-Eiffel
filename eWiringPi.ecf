@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-20-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-20-0 http://www.eiffel.com/developers/xml/configuration-1-20-0.xsd" name="ewiringpi" uuid="3D9878AF-48C0-691B-9E04-000056A736DA" readonly="false">
+	<description>wiringPi</description>
+	<target name="ewiringpi">
+		<description>primary library target</description>
+		<file_rule>
+			<exclude>/spec$</exclude>
+		</file_rule>
+		<option syntax="provisional" manifest_array_type="mismatch_warning">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="total_order_on_reals" value="false"/>
+		<capability>
+			<concurrency support="scoop" use="scoop"/>
+			<void_safety support="all" use="all"/>
+		</capability>
+		<external_include location="/usr/include"/>
+		<external_cflag value="-lwiringPi"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base-safe.ecf"/>
+		<library name="diff" location="$ISE_LIBRARY\library\diff\diff.ecf"/>
+		<cluster name="ewiringpi" location=".\" recursive="true">
+			<description>System Classes</description>
+			<file_rule>
+				<exclude>/.git$</exclude>
+				<exclude>/.svn$</exclude>
+				<exclude>/CVS$</exclude>
+				<exclude>/EIFGENs$</exclude>
+				<exclude>tests</exclude>
+			</file_rule>
+		</cluster>
+	</target>
+	<target name="test" extends="ewiringpi">
+		<description>eWiringPi Tests</description>
+		<root class="ANY" feature="default_create"/>
+		<file_rule>
+			<exclude>/.git$</exclude>
+			<exclude>/.svn$</exclude>
+			<exclude>/CVS$</exclude>
+			<exclude>/EIFGENs$</exclude>
+			<include>tests</include>
+		</file_rule>
+		<option profile="false">
+		</option>
+		<setting name="console_application" value="false"/>
+		<setting name="total_order_on_reals" value="true"/>
+		<library name="testing" location="$ISE_LIBRARY\library\testing\testing-safe.ecf"/>
+		<cluster name="tests" location=".\tests\" recursive="true"/>
+	</target>
+</system>

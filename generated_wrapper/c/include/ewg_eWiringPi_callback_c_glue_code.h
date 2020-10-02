@@ -1,0 +1,124 @@
+#ifndef EWG_CALLBACK_EWIRINGPI___
+#define EWG_CALLBACK_EWIRINGPI___
+
+#include <wiringPi.h>
+
+typedef void (*void_void_anonymous_callback_eiffel_feature) (void *a_class);
+
+void* void_void_anonymous_callback_object;
+void_void_anonymous_callback_eiffel_feature void_void_anonymous_callback_address_1;
+void_void_anonymous_callback_eiffel_feature void_void_anonymous_callback_address_2;
+void_void_anonymous_callback_eiffel_feature void_void_anonymous_callback_address_3;
+
+void set_void_void_anonymous_callback_object (void* a_class);
+
+void release_void_void_anonymous_callback_object (void);
+
+void* get_void_void_anonymous_callback_stub_1 ();
+void* get_void_void_anonymous_callback_stub_2 ();
+void* get_void_void_anonymous_callback_stub_3 ();
+
+void set_void_void_anonymous_callback_entry_1 (void* a_feature);
+void set_void_void_anonymous_callback_entry_2 (void* a_feature);
+void set_void_void_anonymous_callback_entry_3 (void* a_feature);
+
+void call_void_void_anonymous_callback (void *a_function);
+
+
+#include <wiringPi.h>
+
+typedef void *(*voidp_voidp_anonymous_callback_eiffel_feature) (void *a_class, void *anonymous_1);
+
+void* voidp_voidp_anonymous_callback_object;
+voidp_voidp_anonymous_callback_eiffel_feature voidp_voidp_anonymous_callback_address_1;
+voidp_voidp_anonymous_callback_eiffel_feature voidp_voidp_anonymous_callback_address_2;
+voidp_voidp_anonymous_callback_eiffel_feature voidp_voidp_anonymous_callback_address_3;
+
+void set_voidp_voidp_anonymous_callback_object (void* a_class);
+
+void release_voidp_voidp_anonymous_callback_object (void);
+
+void* get_voidp_voidp_anonymous_callback_stub_1 ();
+void* get_voidp_voidp_anonymous_callback_stub_2 ();
+void* get_voidp_voidp_anonymous_callback_stub_3 ();
+
+void set_voidp_voidp_anonymous_callback_entry_1 (void* a_feature);
+void set_voidp_voidp_anonymous_callback_entry_2 (void* a_feature);
+void set_voidp_voidp_anonymous_callback_entry_3 (void* a_feature);
+
+void *call_voidp_voidp_anonymous_callback (void *a_function, void *anonymous_1);
+
+
+#include <wiringPi.h>
+
+typedef void (*void_structwiringpinodestructp_int_int_anonymous_callback_1_eiffel_feature) (void *a_class, struct wiringPiNodeStruct *node, int pin, int mode);
+
+void* void_structwiringpinodestructp_int_int_anonymous_callback_1_object;
+void_structwiringpinodestructp_int_int_anonymous_callback_1_eiffel_feature void_structwiringpinodestructp_int_int_anonymous_callback_1_address_1;
+void_structwiringpinodestructp_int_int_anonymous_callback_1_eiffel_feature void_structwiringpinodestructp_int_int_anonymous_callback_1_address_2;
+void_structwiringpinodestructp_int_int_anonymous_callback_1_eiffel_feature void_structwiringpinodestructp_int_int_anonymous_callback_1_address_3;
+
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_1_object (void* a_class);
+
+void release_void_structwiringpinodestructp_int_int_anonymous_callback_1_object (void);
+
+void* get_void_structwiringpinodestructp_int_int_anonymous_callback_1_stub_1 ();
+void* get_void_structwiringpinodestructp_int_int_anonymous_callback_1_stub_2 ();
+void* get_void_structwiringpinodestructp_int_int_anonymous_callback_1_stub_3 ();
+
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_1_entry_1 (void* a_feature);
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_1_entry_2 (void* a_feature);
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_1_entry_3 (void* a_feature);
+
+void call_void_structwiringpinodestructp_int_int_anonymous_callback_1 (void *a_function, struct wiringPiNodeStruct *node, int pin, int mode);
+
+
+#include <wiringPi.h>
+
+typedef int (*int_structwiringpinodestructp_int_anonymous_callback_eiffel_feature) (void *a_class, struct wiringPiNodeStruct *node, int pin);
+
+void* int_structwiringpinodestructp_int_anonymous_callback_object;
+int_structwiringpinodestructp_int_anonymous_callback_eiffel_feature int_structwiringpinodestructp_int_anonymous_callback_address_1;
+int_structwiringpinodestructp_int_anonymous_callback_eiffel_feature int_structwiringpinodestructp_int_anonymous_callback_address_2;
+int_structwiringpinodestructp_int_anonymous_callback_eiffel_feature int_structwiringpinodestructp_int_anonymous_callback_address_3;
+
+void set_int_structwiringpinodestructp_int_anonymous_callback_object (void* a_class);
+
+void release_int_structwiringpinodestructp_int_anonymous_callback_object (void);
+
+void* get_int_structwiringpinodestructp_int_anonymous_callback_stub_1 ();
+void* get_int_structwiringpinodestructp_int_anonymous_callback_stub_2 ();
+void* get_int_structwiringpinodestructp_int_anonymous_callback_stub_3 ();
+
+void set_int_structwiringpinodestructp_int_anonymous_callback_entry_1 (void* a_feature);
+void set_int_structwiringpinodestructp_int_anonymous_callback_entry_2 (void* a_feature);
+void set_int_structwiringpinodestructp_int_anonymous_callback_entry_3 (void* a_feature);
+
+int call_int_structwiringpinodestructp_int_anonymous_callback (void *a_function, struct wiringPiNodeStruct *node, int pin);
+
+
+#include <wiringPi.h>
+
+typedef void (*void_structwiringpinodestructp_int_int_anonymous_callback_eiffel_feature) (void *a_class, struct wiringPiNodeStruct *node, int pin, int value);
+
+void* void_structwiringpinodestructp_int_int_anonymous_callback_object;
+void_structwiringpinodestructp_int_int_anonymous_callback_eiffel_feature void_structwiringpinodestructp_int_int_anonymous_callback_address_1;
+void_structwiringpinodestructp_int_int_anonymous_callback_eiffel_feature void_structwiringpinodestructp_int_int_anonymous_callback_address_2;
+void_structwiringpinodestructp_int_int_anonymous_callback_eiffel_feature void_structwiringpinodestructp_int_int_anonymous_callback_address_3;
+
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_object (void* a_class);
+
+void release_void_structwiringpinodestructp_int_int_anonymous_callback_object (void);
+
+void* get_void_structwiringpinodestructp_int_int_anonymous_callback_stub_1 ();
+void* get_void_structwiringpinodestructp_int_int_anonymous_callback_stub_2 ();
+void* get_void_structwiringpinodestructp_int_int_anonymous_callback_stub_3 ();
+
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_entry_1 (void* a_feature);
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_entry_2 (void* a_feature);
+void set_void_structwiringpinodestructp_int_int_anonymous_callback_entry_3 (void* a_feature);
+
+void call_void_structwiringpinodestructp_int_int_anonymous_callback (void *a_function, struct wiringPiNodeStruct *node, int pin, int value);
+
+
+#endif
