@@ -4,5 +4,5 @@
 echo Removing generated code.
 #rm $GENERATED_TEMPLATE_HEADER
 rm -r generated_wrapper
-cd C/
-rm -r spec
+# cd C/
+# rm -r spec

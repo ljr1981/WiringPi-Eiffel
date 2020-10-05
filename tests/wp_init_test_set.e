@@ -17,10 +17,8 @@ feature -- Test routines
 
 	wiringpi_init_test
 			-- wiringPi init test
-		local
-			l_api: WIRINGPI_FUNCTIONS_API
 		do
-			create l_api
+			do_nothing
 		end
 
 end

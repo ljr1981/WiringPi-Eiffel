@@ -39,7 +39,7 @@
 	</target>
 	<target name="test" extends="ewiringpi">
 		<description>eWiringPi Tests</description>
-		<root class="ANY" feature="default_create"/>
+		<root class="TEST_APP" feature="make"/>
 		<file_rule>
 			<exclude>/.git$</exclude>
 			<exclude>/.svn$</exclude>
@@ -51,6 +51,9 @@
 		</option>
 		<setting name="console_application" value="false"/>
 		<setting name="total_order_on_reals" value="true"/>
+		<capability>
+			<concurrency support="scoop"/>
+		</capability>
 		<library name="testing" location="$ISE_LIBRARY\library\testing\testing.ecf"/>
 		<cluster name="tests" location=".\tests\" recursive="true"/>
 	</target>
