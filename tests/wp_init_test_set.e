@@ -17,8 +17,14 @@ feature -- Test routines
 
 	wiringpi_init_test
 			-- wiringPi init test
+		local
+			l_api: WIRINGPI_FUNCTIONS_API
+			l_env: EXECUTION_ENVIRONMENT
 		do
-			do_nothing
+			create l_api
+			create l_env
+			l_env.sleep (1_000_000_000)
+			assert_integers_not_equal ("not_fail", -1, l_api.wiring_pi_setup)
 		end
 
 end

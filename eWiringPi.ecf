@@ -19,6 +19,11 @@
 				<platform excluded_value="windows"/>
 			</condition>
 		</external_include>
+		<external_object location="$ECF_CONFIG_PATH/C/spec/$(ISE_PLATFORM)/lib/eif_eWiringPi.a">
+			<condition>
+				<platform excluded_value="windows"/>
+			</condition>
+		</external_object>
 		<external_linker_flag value="-lwiringPi">
 			<condition>
 				<platform excluded_value="windows"/>
@@ -39,7 +44,7 @@
 	</target>
 	<target name="test" extends="ewiringpi">
 		<description>eWiringPi Tests</description>
-		<root class="TEST_APP" feature="make"/>
+		<root class="ANY" feature="default_create"/>
 		<file_rule>
 			<exclude>/.git$</exclude>
 			<exclude>/.svn$</exclude>
@@ -56,5 +61,16 @@
 		</capability>
 		<library name="testing" location="$ISE_LIBRARY\library\testing\testing.ecf"/>
 		<cluster name="tests" location=".\tests\" recursive="true"/>
+	</target>
+	<target name="test_app" extends="ewiringpi">
+		<description>Test application target</description>
+		<root class="TEST_APP" feature="make"/>
+		<file_rule>
+			<exclude>/spec$</exclude>
+			<include>/test$</include>
+		</file_rule>
+		<capability>
+			<concurrency support="scoop"/>
+		</capability>
 	</target>
 </system>

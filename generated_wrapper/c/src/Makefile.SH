@@ -1,6 +1,6 @@
 case $CONFIG in
 '')
-    if test ! -f config.sh; then
+    if test ! -f ./config.sh; then
         (echo "Can't find config.sh."; exit 1)
     fi 2>/dev/null
     . ./config.sh

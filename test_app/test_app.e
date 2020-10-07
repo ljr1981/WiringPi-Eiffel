@@ -18,7 +18,7 @@ feature {NONE} -- Initialization
 			l_api: WIRINGPI_FUNCTIONS_API
 		do
 			create l_api
-			print ("wiring_pi_setup = " + l_api.wiring_pi_setup.out)
+			print ("wiring_pi_setup = " + l_api.wiring_pi_setup.out + "%N")
 
 		end
 
