@@ -19,7 +19,7 @@
 				<platform excluded_value="windows"/>
 			</condition>
 		</external_include>
-		<external_object location="$ECF_CONFIG_PATH/C/spec/$(ISE_PLATFORM)/lib/eif_eWiringPi.a">
+		<external_object location="/home/larry/dev/github/WiringPi-Eiffel/C/spec/unix/lib/eif_eWiringPi.a">
 			<condition>
 				<platform excluded_value="windows"/>
 			</condition>

@@ -1,7 +1,7 @@
 SHELL = /bin/sh
 CC= gcc
 AR = ar rc
-CFLAGS = -O3 -pipe -D_GNU_SOURCE  -I/usr/local/Eiffel_19.05/studio/spec/linux-armv7/include -I../../../generated_wrapper/c/include -I../include -I/usr/include-I../../../C/include
+CFLAGS = -O3 -pipe -D_GNU_SOURCE  -I/usr/include/eiffelstudio-19.05 -I../../../generated_wrapper/c/include -I../include -I/usr/include-I../../../C/include
 LDFLAGS = 
 LIBS = -lm
 MAKE = make
@@ -9,7 +9,7 @@ MKDEP = \$(EIFFEL_SRC)/C/mkdep $(DPFLAGS) --
 MV = /bin/mv
 RANLIB = :
 RM = /bin/rm -f
-PLATFORM = linux-armv7
+PLATFORM = unix
 
 .c.o:
 	$(CC) $(CFLAGS) -c $<
